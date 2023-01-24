@@ -14,10 +14,14 @@ button {
     min-width: 120px;
     padding: 20px;
     font-size: large;
+    font-weight: bold;
     font-family: fantasy;
-    border-radius: 50px;
+    border-radius:45%;
 }
-
+button:hover {
+    background-color: lightslategray;
+    color: ghostwhite;
+}
 #textLine {
     white-space: pre;
     font-size: 20px;
