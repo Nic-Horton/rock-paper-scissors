@@ -19,5 +19,6 @@ button {
 }
 
 #textLine {
+    white-space: pre;
     font-size: 20px;
 }

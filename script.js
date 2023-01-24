@@ -28,27 +28,27 @@ function playRound(playerSelection) {
     if ((player === "Rock" && computer === "Scissors") || (player === "Paper" && computer === "Rock") || (player === "Scissors" && computer === "Paper")) {
         
         playerScore++;
-        result = `<br>You win! ${playerSelection} beats ${computer}` + "<br><br>Player Score: " + playerScore + "<br>Computer Score: " + pcScore;
+        result = "\r\n" + `You win! ${playerSelection} beats ${computer}` + "\r\n" + "\r\n" + "Player Score: " + playerScore + "\r\n" + "Computer Score: " + pcScore;
         
         if (playerScore == 5) {
-            result +=("<br><br>The winner is the player!" + "<br><br> REFRESH TO PLAY AGAIN");
+            result +=( "\r\n" + "\r\n" + "The winner is the player!" + "\r\n" + "\r\n" + "REFRESH TO PLAY AGAIN");
             disableButton(); //Disables buttons to stop further input
         }
 
     } else if ((computer === "Rock" && player === "Scissors") || (computer === "Paper" && player === "Rock") || (computer === "Scissors" && player === "Paper")) {
         
         pcScore++;
-        result = `<br>You lose... ${computer} beats ${playerSelection}` + "<br><br>Player Score: " + playerScore + "<br>Computer Score: " + pcScore;
+        result = "\r\n" + `You lose... ${computer} beats ${playerSelection}` + "\r\n" + "\r\n" + "Player Score: " + playerScore + "\r\n" + "Computer Score: " + pcScore;
         
         
         if (pcScore == 5) {
-            result += ("<br><br>The winner is the computer :(" + "<br><br> REFRESH TO PLAY AGAIN");
+            result += "\r\n" + "\r\n" + ("The winner is the computer :'(" + "\r\n" + "\r\n" + "REFRESH TO PLAY AGAIN");
             disableButton();
         }
 
     } else {
 
-        result = "<br>It's a tie." + "<br><br>Player Score: " + playerScore + "<br>Computer Score: " + pcScore;
+        result = "\r\n" + "It's a tie." + "\r\n" + "\r\n" +"Player Score: " + playerScore + "\r\n" + "Computer Score: " + pcScore;
 
     }
     return (result);
@@ -76,7 +76,7 @@ container.appendChild(scissorsBtn);
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        textLine.innerHTML = playRound(button.id);
+        textLine.textContent = playRound(button.id);
     });
 });
 
