@@ -27,10 +27,8 @@ function playRound(playerSelection) {
     
     if ((player === "Rock" && computer === "Scissors") || (player === "Paper" && computer === "Rock") || (player === "Scissors" && computer === "Paper")) {
         
-        console.log(computer);
         playerScore++;
         result = `<br>You win! ${playerSelection} beats ${computer}` + "<br><br>Player Score: " + playerScore + "<br>Computer Score: " + pcScore;
-        
         
         if (playerScore == 5) {
             result +=("<br><br>The winner is the player!" + "<br><br> REFRESH TO PLAY AGAIN");
@@ -39,7 +37,6 @@ function playRound(playerSelection) {
 
     } else if ((computer === "Rock" && player === "Scissors") || (computer === "Paper" && player === "Rock") || (computer === "Scissors" && player === "Paper")) {
         
-        console.log(computer);
         pcScore++;
         result = `<br>You lose... ${computer} beats ${playerSelection}` + "<br><br>Player Score: " + playerScore + "<br>Computer Score: " + pcScore;
         
@@ -51,7 +48,6 @@ function playRound(playerSelection) {
 
     } else {
 
-        console.log(computer);
         result = "<br>It's a tie." + "<br><br>Player Score: " + playerScore + "<br>Computer Score: " + pcScore;
 
     }
